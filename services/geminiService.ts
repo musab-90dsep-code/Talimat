@@ -6,8 +6,11 @@ let aiClient: GoogleGenAI | null = null;
 
 // Initialize the client only when needed to handle potential missing key gracefully
 const getClient = () => {
-  if (!aiClient && process.env.API_KEY) {
-    aiClient = new GoogleGenAI({ apiKey: process.env.API_KEY });
+  // Vite-এর জন্য সঠিক নিয়ম
+  const apiKey = (import.meta as any).env.VITE_GEMINI_API_KEY;
+
+  if (!aiClient && apiKey) {
+    aiClient = new GoogleGenAI({ apiKey: apiKey });
   }
   return aiClient;
 };
