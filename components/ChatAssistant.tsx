@@ -92,10 +92,11 @@ export const ChatAssistant: React.FC = () => {
       </div>
 
       {/* Chat Window */}
-      <div 
-        className={`fixed bottom-6 right-6 z-50 w-full sm:w-96 bg-white rounded-2xl shadow-2xl border border-gray-100 flex flex-col overflow-hidden transition-all duration-300 transform origin-bottom-right ${isOpen ? 'scale-100 opacity-100' : 'scale-0 opacity-0 pointer-events-none'}`}
+      <div          
+        className={`fixed bottom-4 right-4 left-4 sm:left-auto sm:bottom-6 sm:right-6 z-50 sm:w-96 bg-white rounded-2xl shadow-2xl border border-gray-100 flex flex-col overflow-hidden transition-all duration-300 transform origin-bottom-right ${isOpen ? 'scale-100 opacity-100' : 'scale-0 opacity-0 pointer-events-none'}`}
         style={{ height: '500px', maxHeight: '80vh' }}
       >
+      
         {/* Header */}
         <div className="bg-emerald-700 p-4 flex justify-between items-center text-white">
           <div className="flex items-center gap-2">

@@ -11,6 +11,7 @@ import { Contact } from './pages/Contact';
 import { Admin } from './pages/Admin';
 import { LanguageProvider } from './context/LanguageContext';
 
+
 function App() {
   return (
     <LanguageProvider>
